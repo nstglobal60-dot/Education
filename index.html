@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- jsPDF for certificate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>EduLearn Academy</h1>
+        <p>Learn. Grow. Achieve Excellence.</p>
+    </header>
+
+    <!-- COURSE LIST -->
+    <section id="courses">
+        <h2>Available Courses</h2>
+
+        <div class="course-card">
+            <h3>Web Development Basics</h3>
+            <p>Learn the fundamentals of HTML, CSS, and JavaScript.</p>
+            <button onclick="startCourse('Web Development Basics')">Start Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>Cybersecurity Essentials</h3>
+            <p>Understand how to protect systems and networks.</p>
+            <button onclick="startCourse('Cybersecurity Essentials')">Start Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>Digital Marketing</h3>
+            <p>Master SEO, content marketing, and social ads.</p>
+            <button onclick="startCourse('Digital Marketing')">Start Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>Graphic Design</h3>
+            <p>Master SEO, content marketing, and social ads.</p>
+            <button onclick="startCourse('Graphic Design')">Start Course</button>
+        </div>
+
+        <div class="course-card">
+            <h3>Afiliate Marketing</h3>
+            <p>Master SEO, content marketing, and social ads.</p>
+            <button onclick="startCourse('Afiliate Marketing')">Start Course</button>
+        </div>
+    </section>
+
+    <!-- COURSE CONTENT -->
+    <section id="courseContent" class="hidden">
+        <h2 id="courseTitle"></h2>
+        <p class="lesson-text">
+            This is a short introduction lesson. In a real website, you would add videos,
+            quizzes, modules, etc.
+        </p>
+
+        <button id="completeBtn" onclick="completeCourse()">Complete Course</button>
+    </section>
+
+    <!-- CERTIFICATE SECTION -->
+    <section id="certificateSection" class="hidden">
+        <h2>Congratulations! 🎉</h2>
+        <p>You have successfully completed the course.</p>
+
+        <label>Enter your name:</label>
+        <input type="text" id="studentName" placeholder="Your full name">
+
+        <button onclick="downloadCertificate()">Download Certificate</button>
+    </section>
+
+<script src="script.js"></script>
+<script src="./style.js"></script>
+</body>
+</html>
